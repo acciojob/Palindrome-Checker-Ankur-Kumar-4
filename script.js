@@ -1,13 +1,8 @@
 // complete the given function
 
 function palindrome(str){
-let arr = str.split(" ");
-let word = arr.join("");
+const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
 
- if(word === word.split('').reverse().join('')) {
-   return true;
- }else{
-   return false;
- }
+  return cleanedStr === cleanedStr.split('').reverse().join('');
 }
 module.exports = palindrome
